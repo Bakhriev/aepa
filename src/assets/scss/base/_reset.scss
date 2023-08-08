@@ -4,6 +4,17 @@ html {
 	box-sizing: border-box;
 }
 
+html {
+	overflow: hidden;
+	height: 100%;
+}
+body {
+	min-height: 100vh;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {

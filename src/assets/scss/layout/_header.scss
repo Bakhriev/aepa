@@ -149,5 +149,8 @@
 	@media screen and (max-width: $medium) {
 		display: grid;
 		margin-left: 24px;
+		&:active {
+			scale: 0.97;
+		}
 	}
 }

@@ -1,0 +1,141 @@
+.diff {
+	padding-top: 50px;
+	position: relative;
+	min-height: 600px;
+	background: linear-gradient(
+		189deg,
+		rgba(248, 251, 255, 1) 53%,
+		rgba(255, 255, 255, 1) 92%
+	);
+
+	&__inner {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		justify-content: space-between;
+		gap: 150px;
+	}
+
+	&__left {
+		padding-left: 110px;
+		flex-shrink: 0;
+	}
+
+	&__img {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: -100px;
+			top: -7px;
+			width: 440px;
+			height: 470px;
+			background: url('../img/diffCircle.svg') no-repeat;
+		}
+	}
+
+	&__fragment {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 15px 18px;
+		width: max-content;
+		border-radius: 10px;
+		background: #ddedff;
+
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 15px;
+		font-weight: 300;
+	}
+	&__fragment-1 {
+		top: 290px;
+		left: 12px;
+	}
+	&__fragment-2 {
+		bottom: 82px;
+		left: 280px;
+	}
+	&__fragment-3 {
+		top: 260px;
+		left: 242px;
+		border-radius: 10px;
+		background: #fff;
+		box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.04);
+	}
+
+	&__right {
+		padding-top: 115px;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		color: $lightBlue;
+		font-family: Greenwich;
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 137%;
+	}
+
+	&__text {
+		margin-bottom: 74px;
+		max-width: 700px;
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 19px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: 25px; /* 131.579% */
+	}
+}
+
+.curves {
+	svg {
+		display: flex;
+		position: absolute;
+		&:first-child {
+			top: -140px;
+		}
+		&:last-child {
+			top: -120px;
+		}
+	}
+}
+
+.mouse {
+	position: absolute;
+	top: -106px;
+	left: calc(50% - 18px);
+	transform: translateX(-50%);
+	z-index: 1322321;
+
+	background-color: red;
+}
+.mouse-wrapper {
+	position: relative;
+}
+.mouse-icon {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}
+.mouse-line {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	top: 35px;
+	transform: translateX(-50%);
+}
+.mouse-circle {
+	position: absolute;
+	z-index: 1;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+}

@@ -2,7 +2,6 @@
 	padding-top: 180px;
 	background-color: #f8fbff;
 	padding-bottom: 200px;
-	overflow: hidden;
 
 	@media screen and (max-width: $medium) {
 		padding-top: 20px;
@@ -52,10 +51,6 @@
 
 		@media screen and (max-width: $mobile) {
 			font-size: 45px;
-		}
-
-		span {
-			font-weight: 100;
 		}
 	}
 
