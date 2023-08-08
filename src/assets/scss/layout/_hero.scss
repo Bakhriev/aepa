@@ -1,12 +1,36 @@
 .hero {
 	padding-top: 180px;
-	&__container {
+	background-color: #f8fbff;
+	padding-bottom: 200px;
+	overflow: hidden;
+
+	@media screen and (max-width: $medium) {
+		padding-top: 20px;
 	}
 
 	&__inner {
 		position: relative;
 		display: flex;
 		align-items: center;
+		@media screen and (max-width: $medium) {
+			flex-direction: column;
+		}
+	}
+	&__wrap {
+		@media screen and (max-width: $medium) {
+			display: none;
+		}
+	}
+	&__wrap-mobile {
+		display: none;
+		@media screen and (max-width: $medium) {
+			display: block;
+		}
+		@media screen and (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__left {
@@ -24,6 +48,10 @@
 		line-height: 137%;
 		@media screen and (max-width: $large) {
 			font-size: 50px;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 45px;
 		}
 
 		span {
@@ -44,12 +72,22 @@
 		@media screen and (max-width: $large) {
 			max-width: 500px;
 		}
+		@media screen and (max-width: $mobile) {
+			font-size: 17px;
+			line-height: 129.412%;
+			max-width: 90%;
+			text-align: center;
+		}
 	}
 
 	&__buttons {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 23px;
+		@media screen and (max-width: $mobile) {
+			justify-content: center;
+		}
 	}
 
 	&__mail {
@@ -82,19 +120,63 @@
 		position: absolute;
 		right: 100px;
 		top: -40px;
+		@media screen and (max-width: $medium) {
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 180px;
+		}
 	}
 
 	&__img {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			translate: -50% -50%;
+			width: 350px;
+			height: 350px;
+			border-radius: 50%;
+			z-index: -1;
+
+			opacity: 0.8;
+			background: radial-gradient(50% 50% at 50% 50%, #66acff 0%, #66acff 100%);
+			filter: blur(98.96527099609375px);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			background: url('../img/heroCircles.png') no-repeat center/contain;
+			left: 50%;
+			top: 50%;
+			translate: -50% -50%;
+			width: 600px;
+			height: 600px;
+			z-index: -1;
+			@media screen and (max-width: $mobile) {
+				width: 500px;
+				height: 500px;
+			}
+		}
+		@media screen and (max-width: $mobile) {
+			width: 255px;
+		}
 	}
 
 	&__circles {
+		display: none;
 		position: absolute;
 		right: -100px;
 		width: 540px;
 		top: -120px;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 
@@ -111,10 +193,12 @@
 	padding-left: 25px;
 	border-radius: 10px;
 	background: #fff;
+	@media screen and (max-width: 450px) {
+		right: -54px;
+	}
 	&__text {
 		margin-bottom: 15px;
 		text-align: center;
-		white-space: nowrap;
 
 		color: $gray;
 		font-family: Greenwich;
@@ -135,6 +219,8 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 8px;
+	&:last-child {
+	}
 
 	&__img {
 		width: 50px;
@@ -160,6 +246,13 @@
 	top: -48px;
 	right: 165px;
 	z-index: 5;
+	@media screen and (max-width: $mobile) {
+		right: 98px;
+		top: -80px;
+	}
+	@media screen and (max-width: 450px) {
+		right: 0px;
+	}
 	&__field {
 		position: relative;
 		z-index: 2;

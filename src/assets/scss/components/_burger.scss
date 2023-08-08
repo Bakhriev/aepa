@@ -1,72 +1,83 @@
 .burger {
-  position: relative;
-  display: none;
-  @media screen and (max-width: $medium) {
-    display: flex;
-  }
-  z-index: 10;
+	position: relative;
+	display: none;
+	transition: transform 300ms ease-in-out;
 
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  pointer-events: initial;
+	@media screen and (max-width: $medium) {
+		display: flex;
+		margin-left: auto;
+	}
+	z-index: 10;
 
-  cursor: pointer;
-  background-color: transparent;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	pointer-events: initial;
 
-  &.active {
-    span {
-      background-color: transparent;
-      transition: background 0.2s ease-out;
+	cursor: pointer;
+	background-color: transparent;
 
-      &::before,
-      &::after {
-        transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
-        background-color: $burgerActiveColor;
-      }
+	&.active {
+		transform: translateX(50px);
+		span {
+			background-color: transparent;
+			transition: background 0.2s ease-out;
 
-      &::before {
-        top: 0;
-        transform: rotate3d(0, 0, 1, -45deg);
-      }
-      &::after {
-        top: 0;
-        transform: rotate3d(0, 0, 1, 45deg);
-      }
-    }
-  }
+			&::before,
+			&::after {
+				transition:
+					top 0.2s ease-out,
+					transform 0.2s 0.2s ease-out;
+				background-color: $burgerActiveColor;
+			}
 
-  span {
-    position: absolute;
-    top: calc(50% - 1px);
-    left: calc(50% - 13px);
+			&::before {
+				top: 0;
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+			&::after {
+				top: 0;
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+		}
+	}
 
-    display: block;
-    height: 2px;
-    width: 26px;
-    transform-origin: 50% 50%;
+	span {
+		position: absolute;
+		top: calc(50% - 1px);
+		left: calc(50% - 13px);
 
-    transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    background-color: $burgerColor;
+		display: block;
+		height: 2px;
+		width: 26px;
+		transform-origin: 50% 50%;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
+		transition:
+			0.2s ease-in-out,
+			top 0.2s 0.2s ease-out,
+			transform 0.2s linear;
+		background-color: $burgerColor;
 
-      height: 2px;
-      width: 26px;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
 
-      background-color: $burgerColor;
-      transform-origin: 50% 50%;
-      transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out,
-        transform 0.2s linear;
-    }
-    &::before {
-      top: 7px;
-    }
-    &::after {
-      top: -7px;
-    }
-  }
+			height: 2px;
+			width: 26px;
+
+			background-color: $burgerColor;
+			transform-origin: 50% 50%;
+			transition:
+				0.2s ease-in-out,
+				top 0.2s 0.2s ease-out,
+				transform 0.2s linear;
+		}
+		&::before {
+			top: 7px;
+		}
+		&::after {
+			top: -7px;
+		}
+	}
 }
