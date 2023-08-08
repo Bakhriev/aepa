@@ -1,0 +1,42 @@
+// Body
+body {
+	font-family: serif;
+	font-weight: 400;
+	font-size: 16px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-color: #f8fbff;
+}
+
+// Wrapper
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	overflow: hidden;
+}
+
+// Container
+.container {
+	margin: 0 auto;
+
+	max-width: 1270px;
+	padding: 0 15px;
+}
+
+.btn {
+	color: $light;
+	font-family: Greenwich;
+	font-size: 19px;
+	font-weight: 400;
+	border-radius: 30px;
+	background: #66acff;
+	padding-top: 21px;
+	padding-bottom: 17px;
+	padding-right: 26px;
+	padding-left: 32px;
+}
+
+.btn--brown {
+	background-color: #e8d3bf;
+}
