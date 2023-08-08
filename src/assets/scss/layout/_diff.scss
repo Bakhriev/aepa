@@ -1,5 +1,9 @@
 .diff {
 	padding-top: 50px;
+	padding-bottom: 100px;
+	@media screen and (max-width: $tablet) {
+		padding-top: 16px;
+	}
 	position: relative;
 	min-height: 600px;
 	background: linear-gradient(
@@ -14,15 +18,41 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 150px;
+		@media screen and (max-width: $medium) {
+			flex-direction: column-reverse;
+			align-items: center;
+			gap: 30px;
+		}
 	}
-
+	&__info {
+		@media screen and (max-width: $medium) {
+			display: none;
+		}
+	}
+	&__info-mobile {
+		display: none;
+		@media screen and (max-width: $medium) {
+			display: flex;
+			flex-direction: column;
+			margin-top: 30px;
+		}
+	}
 	&__left {
 		padding-left: 110px;
 		flex-shrink: 0;
+		@media screen and (max-width: $medium) {
+			padding-left: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__img {
 		position: relative;
+		@media screen and (max-width: $mobile) {
+			width: 200px;
+		}
 
 		&::before {
 			content: '';
@@ -33,6 +63,18 @@
 			width: 440px;
 			height: 470px;
 			background: url('../img/diffCircle.svg') no-repeat;
+			@media screen and (max-width: $medium) {
+				width: 425px;
+				height: 432px;
+				background: url('../img/diffCircle.svg') no-repeat center/contain;
+			}
+			@media screen and (max-width: $mobile) {
+				width: 335px;
+				height: 352px;
+				left: 50%;
+				top: 50%;
+				translate: -50% -50%;
+			}
 		}
 	}
 
@@ -53,15 +95,19 @@
 	}
 	&__fragment-1 {
 		top: 290px;
-		left: 12px;
+		left: -95px;
 	}
 	&__fragment-2 {
 		bottom: 82px;
-		left: 280px;
+		left: 170px;
+		@media screen and (max-width: $mobile) {
+			bottom: auto;
+			top: -5px;
+		}
 	}
 	&__fragment-3 {
 		top: 260px;
-		left: 242px;
+		left: 120px;
 		border-radius: 10px;
 		background: #fff;
 		box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.04);
@@ -69,6 +115,12 @@
 
 	&__right {
 		padding-top: 115px;
+
+		@media screen and (max-width: $medium) {
+			padding-top: 0;
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -79,6 +131,12 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 137%;
+		@media screen and (max-width: $medium) {
+			text-align: center;
+		}
+		@media screen and (max-width: $mobile) {
+			font-size: 30px;
+		}
 	}
 
 	&__text {
@@ -88,8 +146,18 @@
 		font-family: Greenwich;
 		font-size: 19px;
 		font-style: normal;
-		font-weight: 350;
-		line-height: 25px; /* 131.579% */
+		font-weight: 400;
+		line-height: 131.579%;
+		@media screen and (max-width: $medium) {
+			margin-bottom: 27px;
+			text-align: center;
+			font-size: 17px;
+		}
+	}
+	&__btn {
+		@media screen and (max-width: $medium) {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -100,8 +168,16 @@
 		&:first-child {
 			top: -140px;
 		}
-		&:last-child {
+		&:nth-child(2) {
 			top: -120px;
+		}
+		&:nth-child(3) {
+			bottom: -165px;
+			top: auto;
+		}
+		&:nth-child(4) {
+			bottom: -190px;
+			top: auto;
 		}
 	}
 }
@@ -114,6 +190,9 @@
 	z-index: 1322321;
 
 	background-color: red;
+	@media screen and (max-width: $medium) {
+		display: none;
+	}
 }
 .mouse-wrapper {
 	position: relative;

@@ -52,6 +52,9 @@
 		@media screen and (max-width: $mobile) {
 			font-size: 45px;
 		}
+		@media screen and (max-width: 440px) {
+			font-size: 38px;
+		}
 	}
 
 	&__title {
