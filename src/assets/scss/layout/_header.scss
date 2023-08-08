@@ -97,7 +97,7 @@
 	&__link {
 		display: flex;
 		position: relative;
-
+		color: $gray;
 		&.active {
 			color: $lightBlue;
 		}
