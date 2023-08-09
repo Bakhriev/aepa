@@ -63,3 +63,31 @@ const dropdownInit = () => {
 	}
 }
 dropdownInit()
+
+const swiper = new Swiper('.feedback__swiper', {
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	navigation: {
+		nextEl: '.next-arrow',
+		prevEl: '.prev-arrow',
+	},
+	// Responsive breakpoints
+	breakpoints: {
+		// when window width is >= 320px
+		800: {
+			slidesPerView: 1,
+			spaceBetween: 50,
+		},
+		// when window width is >= 480px
+		900: {
+			slidesPerView: 2,
+			spaceBetween: 0,
+		},
+		// when window width is >= 640px
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 18,
+		},
+	},
+})
