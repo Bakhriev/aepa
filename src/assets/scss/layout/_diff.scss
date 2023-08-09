@@ -5,12 +5,8 @@
 		padding-top: 16px;
 	}
 	position: relative;
-	min-height: 600px;
-	background: linear-gradient(
-		189deg,
-		rgba(248, 251, 255, 1) 53%,
-		rgba(255, 255, 255, 1) 92%
-	);
+
+	background-color: #f8fbff;
 
 	&__inner {
 		position: relative;
@@ -165,19 +161,16 @@
 	svg {
 		display: flex;
 		position: absolute;
+		z-index: 3;
+
 		&:first-child {
-			top: -140px;
+			top: -130px;
 		}
 		&:nth-child(2) {
 			top: -120px;
 		}
 		&:nth-child(3) {
-			bottom: -165px;
-			top: auto;
-		}
-		&:nth-child(4) {
-			bottom: -190px;
-			top: auto;
+			top: -100px;
 		}
 	}
 }

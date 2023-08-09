@@ -261,6 +261,7 @@ function watchFiles() {
 	watch([path.src.js], js)
 	watch([path.src.img], img)
 	watch([srcPath + 'assets/**/*.html'], html)
+	watch([srcPath + '**/*.html'], html)
 	watch([path.src.img], webp)
 	watch([path.src.svg], svg)
 	watch([path.src.vendors], vendors)

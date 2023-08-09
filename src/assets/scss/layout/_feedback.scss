@@ -1,6 +1,6 @@
 .feedback {
 	background-color: #f8fbff;
-	padding-bottom: 500px;
+	padding-bottom: 100px;
 	padding-top: 10px;
 
 	&__title {
@@ -11,6 +11,9 @@
 		font-size: 50px;
 		font-weight: 400;
 		line-height: 137%;
+		@media screen and (max-width: $medium) {
+			font-size: 30px;
+		}
 	}
 
 	&__wrap {
@@ -22,6 +25,7 @@
 	}
 
 	&__swiper {
+		position: relative;
 		min-height: 500px;
 	}
 }
@@ -64,13 +68,14 @@
 	height: 25px;
 }
 
-.swiper-slide {
-	padding-top: 90px;
-	padding-left: 32px;
-
-	&:first-child {
+.feedback__swiper {
+	overflow: hidden !important;
+	.swiper-slide {
+		padding-top: 90px;
+		padding-left: 32px;
 	}
 }
+
 .card {
 	position: relative;
 	width: 328px;

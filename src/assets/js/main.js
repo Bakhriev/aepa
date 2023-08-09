@@ -74,19 +74,38 @@ const swiper = new Swiper('.feedback__swiper', {
 	},
 	// Responsive breakpoints
 	breakpoints: {
-		// when window width is >= 320px
-		800: {
+		300: {
 			slidesPerView: 1,
 			spaceBetween: 50,
 		},
-		// when window width is >= 480px
-		900: {
+		800: {
 			slidesPerView: 2,
 			spaceBetween: 0,
 		},
-		// when window width is >= 640px
 		1200: {
 			slidesPerView: 3,
+			spaceBetween: 18,
+		},
+	},
+})
+
+const swiperTeam = new Swiper('.team__swiper', {
+	navigation: {
+		nextEl: '.next-arrow',
+		prevEl: '.prev-arrow',
+	},
+	// Responsive breakpoints
+	breakpoints: {
+		300: {
+			slidesPerView: 1,
+			spaceBetween: 50,
+		},
+		800: {
+			slidesPerView: 2,
+			spaceBetween: 0,
+		},
+		1200: {
+			slidesPerView: 5,
 			spaceBetween: 18,
 		},
 	},

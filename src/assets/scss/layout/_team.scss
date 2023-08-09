@@ -1,0 +1,143 @@
+.team {
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 170px;
+	background: #f8fbff;
+
+	&__curves {
+		position: absolute;
+		svg {
+			&:nth-child(1) {
+				top: -185px;
+				position: absolute;
+			}
+			&:nth-child(2) {
+				top: -120px;
+				position: absolute;
+				@media screen and (max-width: $medium) {
+					left: -1000px;
+				}
+			}
+		}
+	}
+	&__arrows {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 20px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 80px;
+		text-align: center;
+
+		color: $lightBlue;
+		font-family: Greenwich;
+		font-size: 50px;
+		font-weight: 400;
+		line-height: 137%;
+	}
+
+	&__cards {
+		padding-left: 50px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn {
+		margin: 0 auto;
+		margin-top: 55px;
+	}
+}
+
+.team-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__img {
+		position: relative;
+		.img {
+			position: relative;
+			z-index: 2;
+			width: 175px;
+			height: 175px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__circles {
+		width: 230px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+	}
+
+	&__name {
+		margin-top: 50px;
+		margin-bottom: 10px;
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 21px;
+		font-weight: 500;
+		line-height: 22px;
+		span {
+			font-size: 21px;
+			font-weight: 300;
+			line-height: 104.762%;
+		}
+	}
+
+	&__type {
+		margin-bottom: 28px;
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 19px;
+		font-weight: 300;
+	}
+
+	&__btn {
+		display: grid;
+		place-items: center;
+		padding: 12px 21px;
+		border-radius: 30px;
+		border: 1px solid #e8d3bf;
+
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 19px;
+		font-weight: 400;
+		transition:
+			background-color 150ms ease-in-out,
+			color 150ms ease-in-out;
+		&:hover {
+			background-color: #e8d3bf;
+			color: #fff;
+		}
+		&:active {
+			scale: 0.97;
+		}
+	}
+}
+
+.team__swiper {
+	position: relative;
+}

@@ -1,0 +1,35 @@
+.footer {
+	position: relative;
+	z-index: 3;
+	padding-bottom: 34px;
+	background: #f8fbff;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 30px;
+		@media screen and (max-width: $medium) {
+			gap: 17px;
+		}
+		align-items: center;
+	}
+
+	&__right {
+		margin-left: auto;
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__pol {
+		color: $gray;
+		font-family: Greenwich;
+		font-size: 17px;
+		font-weight: 300;
+		@media screen and (max-width: $medium) {
+			font-size: 15px;
+		}
+	}
+}
